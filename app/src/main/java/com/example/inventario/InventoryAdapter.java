@@ -30,8 +30,11 @@ public class InventoryAdapter extends  RecyclerView.Adapter <InventoryAdapter.In
         holder.Nombre.setText("Nombre: " + objInventory.get(position).getNombre());
         holder.Cantidad.setText("Cantidad: " + objInventory.get(position).getCantidad());
         holder.valor.setText("Valor: " + objInventory.get(position).getValor());
-        holder.estado.setText("Estado: " + objInventory.get(position).getActivo());
-
+        if (objInventory.get(position).getActivo().equalsIgnoreCase("si")) {
+            holder.estado.setText("Estado: Activo");
+        } else {
+            holder.estado.setText("Estado: Inactivo");
+        }
     }
 
     @Override
