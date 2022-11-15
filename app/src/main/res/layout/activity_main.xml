@@ -67,6 +67,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:backgroundTint="#34747C"
+        android:onClick="login"
         android:text="Ingresar" />
 
     <TextView
